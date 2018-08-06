@@ -8,13 +8,15 @@ import cn.no7player.model.User;
 public interface UserRepository {
     /**
      * 新增用户
+     *
      * @param user
      * @return 用户id
      */
-    long insert(User user);
+    Long insert(User user);
 
     /**
      * 基于用户id搜索
+     *
      * @param id
      * @return 用户模型
      */

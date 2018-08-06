@@ -8,6 +8,7 @@ import cn.no7player.model.dataobject.UserDO;
 public interface UserMapper {
     /**
      * 插入用户
+     *
      * @param userDO
      * @return 用户自增id
      */
@@ -15,6 +16,7 @@ public interface UserMapper {
 
     /**
      * 基于用户id搜索
+     *
      * @param id
      * @return
      */

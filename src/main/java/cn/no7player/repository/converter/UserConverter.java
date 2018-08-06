@@ -9,10 +9,13 @@ import cn.no7player.model.dataobject.UserDO;
  */
 public class UserConverter {
 
-    public static UserDO convert2DO(User user){
+    public static UserDO convert2DO(User user) {
         UserDO userDO = new UserDO();
-        userDO.setId(user.getId());
+        if(user.getId() != null){
+            userDO.setId(user.getId());
+        }
         userDO.setName(user.getName());
+        userDO.setPassword(user.getPassword());
         userDO.setTelphone(user.getTelphone());
         userDO.setAddress(user.getAddress());
         userDO.setGmtCreate(user.getGmtCreate());
@@ -20,9 +23,11 @@ public class UserConverter {
         return userDO;
     }
 
-    public static User convert2Model(UserDO userDO){
+    public static User convert2Model(UserDO userDO) {
         User user = new User();
-        user.setId(userDO.getId());
+        if(userDO.getId() != null){
+            user.setId(userDO.getId());
+        }
         user.setName(userDO.getName());
         user.setPassword(userDO.getPassword());
         user.setTelphone(userDO.getTelphone());

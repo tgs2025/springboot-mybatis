@@ -9,11 +9,11 @@ public class User {
     /**
      * 用户id
      */
-    private long id;
+    private Long id;
     /**
      * 用户名
      */
-    private String name ;
+    private String name;
     /**
      * 密码
      */
@@ -35,11 +35,11 @@ public class User {
      */
     private Date gmtModofied;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -90,4 +90,20 @@ public class User {
     public void setGmtModofied(Date gmtModofied) {
         this.gmtModofied = gmtModofied;
     }
+
+    // todo 添加一个 工具类 用于所有的model
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(id == null ? "-" : id).append(", ")
+                .append(name == null ? "-" : name).append(", ")
+                .append(password == null ? "-" : password).append(", ")
+                .append(telphone == null ? "-" : telphone).append(", ")
+                .append(address == null ? "-" : address).append(", ")
+                .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
+                .append(gmtModofied == null ? "-" : gmtModofied);
+        return sb.toString();
+    }
+
 }

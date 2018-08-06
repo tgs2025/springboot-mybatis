@@ -10,11 +10,11 @@ public class UserDO {
     /**
      * 用户id
      */
-    private long id;
+    private Long id;
     /**
      * 用户名
      */
-    private String name ;
+    private String name;
     /**
      * 密码
      */
@@ -36,11 +36,11 @@ public class UserDO {
      */
     private Date gmtModified;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

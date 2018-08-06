@@ -14,7 +14,7 @@ import java.util.List;
  * Created by zl on 2015/8/27.
  */
 @RestController
-@RequestMapping(value="/users")
+@RequestMapping(value = "/users")
 public class SwaggerController {
 
 
@@ -23,28 +23,27 @@ public class SwaggerController {
      */
 
     /**
-     *
      * @return
      */
-    @ApiOperation(value="Get all users",notes="requires noting")
-    @RequestMapping(method=RequestMethod.GET)
-    public List<User> getUsers(){
-        List<User> list=new ArrayList<User>();
+    @ApiOperation(value = "Get all users", notes = "requires noting")
+    @RequestMapping(method = RequestMethod.GET)
+    public List<User> getUsers() {
+        List<User> list = new ArrayList<User>();
 
-        User user=new User();
+        User user = new User();
         user.setName("hello");
         list.add(user);
 
-        User user2=new User();
+        User user2 = new User();
         user.setName("world");
         list.add(user2);
         return list;
     }
 
-    @ApiOperation(value="Get user with id",notes="requires the id of user")
-    @RequestMapping(value="/{name}",method=RequestMethod.GET)
-    public User getUserById(@PathVariable String name){
-        User user=new User();
+    @ApiOperation(value = "Get user with id", notes = "requires the id of user")
+    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+    public User getUserById(@PathVariable String name) {
+        User user = new User();
         user.setName("hello world");
         return user;
     }

@@ -15,8 +15,8 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User getUserInfo(){
-        User user=userRepository.queryById(1);
+    public User getUserInfo() {
+        User user = userRepository.queryById(1);
         //User user=null;
         return user;
     }
