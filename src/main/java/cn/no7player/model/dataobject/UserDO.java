@@ -1,11 +1,12 @@
-package cn.no7player.model;
+package cn.no7player.model.dataobject;
 
 import java.util.Date;
 
 /**
- * Created by zl on 2015/8/27.
+ * 用户表 userDO
+ * Created by tangenqing on 18/8/6.
  */
-public class User {
+public class UserDO {
     /**
      * 用户id
      */
@@ -33,7 +34,7 @@ public class User {
     /**
      * 修改时间
      */
-    private Date gmtModofied;
+    private Date gmtModified;
 
     public long getId() {
         return id;
@@ -83,11 +84,11 @@ public class User {
         this.gmtCreate = gmtCreate;
     }
 
-    public Date getGmtModofied() {
-        return gmtModofied;
+    public Date getGmtModified() {
+        return gmtModified;
     }
 
-    public void setGmtModofied(Date gmtModofied) {
-        this.gmtModofied = gmtModofied;
+    public void setGmtModified(Date gmtModified) {
+        this.gmtModified = gmtModified;
     }
 }

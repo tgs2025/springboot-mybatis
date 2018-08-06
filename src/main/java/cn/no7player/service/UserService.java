@@ -1,7 +1,7 @@
 package cn.no7player.service;
 
-import cn.no7player.mapper.UserMapper;
 import cn.no7player.model.User;
+import cn.no7player.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +13,10 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    private UserMapper userMapper;
+    private UserRepository userRepository;
 
     public User getUserInfo(){
-        User user=userMapper.findUserInfo();
+        User user=userRepository.queryById(1);
         //User user=null;
         return user;
     }
