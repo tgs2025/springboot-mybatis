@@ -39,8 +39,7 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-
-        <dependency>
+c        <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>1.2.2</version>
