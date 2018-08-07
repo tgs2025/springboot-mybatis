@@ -1,18 +1,18 @@
 package cn.no7player.repository;
 
-import cn.no7player.model.Lable_info;
+import cn.no7player.model.LabelInfo;
 
 /**
  * Created by tgs on 2018/8/7.
  */
-public interface Lable_infoRepository {
+public interface LabelInfoRepository {
     /**
      * 新增用户
      *
-     * @param lable_info
+     * @param labelInfo
      * @return 标签id
      */
-    Long insert(Lable_info lable_info);
+    Long insert(LabelInfo labelInfo);
 
     /**
      * 基于用户id搜索
@@ -20,5 +20,5 @@ public interface Lable_infoRepository {
      * @param id
      * @return 用户模型
      */
-    Lable_info queryById(long id);
+    LabelInfo queryById(long id);
 }

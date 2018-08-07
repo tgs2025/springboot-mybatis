@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by tgs on 2018/8/7.
  */
-public class Lable_info {
+public class LabelInfo {
     /**
      * 标签id
      */
@@ -17,7 +17,7 @@ public class Lable_info {
     /**
      * 是否热门
      */
-    private String is_hot;
+    private String isHot;
 
     /**
      * 创建时间
@@ -26,7 +26,7 @@ public class Lable_info {
     /**
      * 修改时间
      */
-    private Date gmtModofied;
+    private Date gmtModified;
 
     public Long getId() {
         return id;
@@ -44,12 +44,12 @@ public class Lable_info {
         this.name = name;
     }
 
-    public String getIs_hot() {
-        return is_hot;
+    public String getIsHot() {
+        return isHot;
     }
 
-    public void setIs_hot(String is_hot) {
-        this.is_hot = is_hot;
+    public void setIsHot(String isHot) {
+        this.isHot = isHot;
     }
 
     public Date getGmtCreate() {
@@ -60,12 +60,12 @@ public class Lable_info {
         this.gmtCreate = gmtCreate;
     }
 
-    public Date getGmtModofied() {
-        return gmtModofied;
+    public Date getGmtModified() {
+        return gmtModified;
     }
 
-    public void setGmtModofied(Date gmtModofied) {
-        this.gmtModofied = gmtModofied;
+    public void setGmtModified(Date gmtModified) {
+        this.gmtModified = gmtModified;
     }
 
     // todo 添加一个 工具类 用于所有的model
@@ -75,9 +75,9 @@ public class Lable_info {
         StringBuilder sb = new StringBuilder();
         sb.append(id == null ? "-" : id).append(", ")
                 .append(name == null ? "-" : name).append(", ")
-                .append(is_hot ==null ? "-" : is_hot).append(", ")
+                .append(isHot ==null ? "-" : isHot).append(", ")
                 .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
-                .append(gmtModofied == null ? "-" : gmtModofied);
+                .append(gmtModified == null ? "-" : gmtModified);
         return sb.toString();
     }
 }

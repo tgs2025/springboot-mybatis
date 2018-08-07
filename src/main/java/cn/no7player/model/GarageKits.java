@@ -4,6 +4,7 @@
  */
 package cn.no7player.model;
 
+import cn.no7player.model.enums.GKStatus;
 import cn.no7player.model.enums.GKType;
 
 /**
@@ -11,6 +12,10 @@ import cn.no7player.model.enums.GKType;
  * @version $Id: GarageKits, v0.1 2018年08月07日 下午12:49 enqing.teq Exp $
  */
 public class GarageKits {
+    /*
+    状态
+     */
+    private GKStatus status;
     /**
      * 手伴类型
      */
@@ -22,6 +27,11 @@ public class GarageKits {
      *
      * @return property value of type
      */
+    public GKStatus getStatus() {
+        return status;
+    }
+
+
     public GKType getType() {
         return type;
     }
@@ -33,5 +43,9 @@ public class GarageKits {
      */
     public void setType(GKType type) {
         this.type = type;
+    }
+
+    public void setStatus(GKStatus status) {
+        this.status = status;
     }
 }

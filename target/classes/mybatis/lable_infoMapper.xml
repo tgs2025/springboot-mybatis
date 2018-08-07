@@ -1,30 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
-<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
-<!--<mapper namespace="cn.no7player.mapper.UserMapper">-->
-<!---->
-<!--<select id="findUserInfo" resultType="cn.no7player.model.User">-->
-<!--select name, age,password from user;-->
-<!--</select>-->
-<!---->
-<!--</mapper>-->
-<mapper namespace="cn.no7player.mapper.Lable_infoMapper">
-    <resultMap id="Lable_infoResultMap" type="cn.no7player.model.dataobject.Lable_infoDO">
+<mapper namespace="cn.no7player.mapper.LabelInfoMapper">
+    <resultMap id="LabelInfoResultMap" type="cn.no7player.model.dataobject.LabelInfoDO">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="name" property="name" jdbcType="VARCHAR"/>
-        <result column="is_hot" property="is_hot" jdbcType="VARCHAR"/>
+        <result column="is_hot" property="isHot" jdbcType="VARCHAR"/>
         <result column="gmt_create" property="gmtCreate" jdbcType="DATE"/>
         <result column="gmt_modified" property="gmtModified" jdbcType="DATE"/>
     </resultMap>
 
-    <insert id="insertLable_info" parameterType="cn.no7player.model.dataobject.Lable_infoDO">
+    <insert id="insertLabelInfo" parameterType="cn.no7player.model.dataobject.LabelInfoDO">
         insert into lable_info (name,is_hot,gmt_create,gmt_modified)
-        values (#{name},#{is_hot},#{gmtCreate},#{gmtModified})
+        values (#{name},#{isHot},#{gmtCreate},#{gmtModified})
     </insert>
 
-    <select id="selectById" resultMap="Lable_infoResultMap" parameterType="java.lang.Long">
+    <select id="selectById" resultMap="LabelInfoResultMap" parameterType="java.lang.Long">
         select id,name,is_hot,gmt_create,gmt_modified
         from lable_info
         where id = #{id}

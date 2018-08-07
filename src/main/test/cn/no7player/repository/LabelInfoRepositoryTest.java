@@ -4,7 +4,7 @@ package cn.no7player.repository;
  * Created by tgs on 2018/8/7.
  */
 import cn.no7player.Application;
-import cn.no7player.model.Lable_info;
+import cn.no7player.model.LabelInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,22 +18,22 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
-public class Lable_infoRepositoryTest {
+public class LabelInfoRepositoryTest {
     @Autowired
-    private Lable_infoRepository lable_infoRepository;
-
+    private LabelInfoRepository labelInfoRepository;
+//todo 类名规范
     @Test
     public void queryByIdTest() {
-        Lable_info lable_info = lable_infoRepository.queryById(1L);
-        System.out.println(lable_info);
+        LabelInfo labelInfo = labelInfoRepository.queryById(1L);
+        System.out.println(labelInfo);
     }
 
     @Test
     public void insertTest(){
-        Lable_info lable_info = new Lable_info();
-        lable_info.setName("Game");
-        lable_info.setIs_hot("yes");
+        LabelInfo labelInfo = new LabelInfo();
+        labelInfo.setName("Game");
+        labelInfo.setIsHot("yes");
 
-        lable_infoRepository.insert(lable_info);
+        labelInfoRepository.insert(labelInfo);
     }
 }

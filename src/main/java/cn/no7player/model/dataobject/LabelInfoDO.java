@@ -4,7 +4,7 @@ package cn.no7player.model.dataobject;
  * Created by tgs on 2018/8/7.
  */
 import java.util.Date;
-public class Lable_infoDO {
+public class LabelInfoDO {
     /**
  * 标签id
  */
@@ -16,7 +16,7 @@ public class Lable_infoDO {
     /**
      * 是否热门
      */
-    private String is_hot;
+    private String isHot;
 
     /**
      * 创建时间
@@ -43,13 +43,13 @@ public class Lable_infoDO {
         this.name = name;
     }
 
-    public String getIs_hot() {
-        return is_hot;
+    public String getIsHot() {
+        return isHot;
     }
 
-    public void setIs_hot(String is_hot) { this.is_hot = is_hot;
+    public void setIsHot(String isHot) {
+        this.isHot = isHot;
     }
-
 
     public Date getGmtCreate() {
         return gmtCreate;
