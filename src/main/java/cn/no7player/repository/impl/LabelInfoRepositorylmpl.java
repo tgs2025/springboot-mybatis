@@ -25,7 +25,7 @@ public class LabelInfoRepositorylmpl implements LabelInfoRepository {
         public Long insert(LabelInfo labelInfo) {
             labelInfo.setGmtCreate(new Date());
             labelInfo.setGmtModified(new Date());
-//            System.out.println(lable_info);
+//            System.out.println(label_info);
             LabelInfoDO labelInfoDO = LabelInfoConverter.convert2DO(labelInfo);
             return labelInfoMapper.insertLabelInfo(labelInfoDO);
         }

@@ -4,10 +4,11 @@
  */
 package cn.no7player.model.dataobject;
 
-import javax.xml.crypto.Data;
+
+import java.util.Date;
 
 /**
- * 手伴do
+ * 手伴表do
  *
  * @author enqing.teq
  * @version $Id: GarageKitsDO, v0.1 2018年08月07日 下午12:49 enqing.teq Exp $
@@ -24,22 +25,24 @@ public class GarageKitsDO {
     /**
      * 参与人数
      */
-    private int participants_num;
+    private int participantsNum;
     /**
     当前参与人数
      */
-    private int cur_participants_num;
-
+    private int curParticipantsNum;
+    /**
+     * 发布者
+     */
     private String publisher;
-    /*
+    /**
     中奖者
      */
-    private String target_name;
-    /*
+    private String targetName;
+    /**
     状态
      */
     private String status;
-    /*
+    /**
     图片
      */
     private String img;
@@ -47,14 +50,14 @@ public class GarageKitsDO {
      * 手伴类型
      */
     private String type;
-    /*
+    /**
     创建时间
      */
-    private Data gmt_create;
-    /*
+    private Date gmtCreate;
+    /**
     修改时间
      */
-    private Data gmt_modified;
+    private Date gmtModified;
 
 
     /**
@@ -78,20 +81,20 @@ public class GarageKitsDO {
         this.title = title;
     }
 
-    public int getParticipants_num() {
-        return participants_num;
+    public int getParticipantsNum() {
+        return participantsNum;
     }
 
-    public void setParticipants_num(int participants_num) {
-        this.participants_num = participants_num;
+    public void setParticipantsNum(int participantsNum) {
+        this.participantsNum = participantsNum;
     }
 
-    public int getCur_participants_num() {
-        return cur_participants_num;
+    public int getCurParticipantsNum() {
+        return curParticipantsNum;
     }
 
-    public void setCur_participants_num(int cur_participants_num) {
-        this.cur_participants_num = cur_participants_num;
+    public void setCurParticipantsNum(int curParticipantsNum) {
+        this.curParticipantsNum = curParticipantsNum;
     }
 
     public String getPublisher() {
@@ -102,12 +105,12 @@ public class GarageKitsDO {
         this.publisher = publisher;
     }
 
-    public String getTarget_name() {
-        return target_name;
+    public String getTargetName() {
+        return targetName;
     }
 
-    public void setTarget_name(String target_name) {
-        this.target_name = target_name;
+    public void setTargetName(String targetName) {
+        this.targetName = targetName;
     }
 
     public String getStatus() {
@@ -139,19 +142,19 @@ public class GarageKitsDO {
         this.type = type;
     }
 
-    public Data getGmt_create() {
-        return gmt_create;
+    public Date getGmtModified() {
+        return gmtModified;
     }
 
-    public void setGmt_create(Data gmt_create) {
-        this.gmt_create = gmt_create;
+    public void setGmtModified(Date gmtModified) {
+        this.gmtModified = gmtModified;
     }
 
-    public Data getGmt_modified() {
-        return gmt_modified;
+    public Date getGmtCreate() {
+        return gmtCreate;
     }
 
-    public void setGmt_modified(Data gmt_modified) {
-        this.gmt_modified = gmt_modified;
+    public void setGmtCreate(Date gmtCreate) {
+        this.gmtCreate = gmtCreate;
     }
 }

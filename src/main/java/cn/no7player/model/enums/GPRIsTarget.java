@@ -1,13 +1,13 @@
 package cn.no7player.model.enums;
 
 /**
- * 手办状态
- * Created by tgs on 2018/8/7.
+ * 中奖情况
+ * Created by tgs on 2018/8/8.
  */
-public enum GKStatus {
-    PROCESS("PROCSEE", "进行中"),
+public enum GPRIsTarget {
+    FALSE("FALSE", "false"),
 
-    FINISH("FINSIH", "已结束"),
+    TRUE("TRUE", "true"),
     ;
     private String code;
 
@@ -16,7 +16,7 @@ public enum GKStatus {
      */
     private String desc;
 
-    GKStatus(String code, String desc) {
+    GPRIsTarget(String code, String desc) {
         this.code = code;
         this.desc = desc;
     }
@@ -33,10 +33,10 @@ public enum GKStatus {
      * @param code
      * @return
      */
-    public static GKStatus getByCode(String code) {
-        for (GKStatus status : values()) {
-            if (status.getCode().equals(code)) {
-                return status;
+    public static GPRIsTarget getByCode(String code) {
+        for (GPRIsTarget isTarget : values()) {
+            if (isTarget.getCode().equals(code)) {
+                return isTarget;
             }
         }
         return null;

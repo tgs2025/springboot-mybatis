@@ -33,7 +33,7 @@ public class User {
     /**
      * 修改时间
      */
-    private Date gmtModofied;
+    private Date gmtModified;
 
     public Long getId() {
         return id;
@@ -83,12 +83,12 @@ public class User {
         this.gmtCreate = gmtCreate;
     }
 
-    public Date getGmtModofied() {
-        return gmtModofied;
+    public Date getGmtModified() {
+        return gmtModified;
     }
 
-    public void setGmtModofied(Date gmtModofied) {
-        this.gmtModofied = gmtModofied;
+    public void setGmtModified(Date gmtModified) {
+        this.gmtModified = gmtModified;
     }
 
     // todo 添加一个 工具类 用于所有的model
@@ -102,7 +102,7 @@ public class User {
                 .append(telphone == null ? "-" : telphone).append(", ")
                 .append(address == null ? "-" : address).append(", ")
                 .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
-                .append(gmtModofied == null ? "-" : gmtModofied);
+                .append(gmtModified == null ? "-" : gmtModified);
         return sb.toString();
     }
 

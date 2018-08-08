@@ -7,7 +7,7 @@ import cn.no7player.model.LabelInfo;
  */
 public interface LabelInfoRepository {
     /**
-     * 新增用户
+     * 新增标签
      *
      * @param labelInfo
      * @return 标签id
@@ -15,10 +15,10 @@ public interface LabelInfoRepository {
     Long insert(LabelInfo labelInfo);
 
     /**
-     * 基于用户id搜索
+     * 基于标签id搜索
      *
      * @param id
-     * @return 用户模型
+     * @return 标签模型
      */
     LabelInfo queryById(long id);
 }

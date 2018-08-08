@@ -22,8 +22,8 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public Long insert(User user) {
         user.setGmtCreate(new Date());
-        user.setGmtModofied(new Date());
-        System.out.println(user);
+        user.setGmtModified(new Date());
+        //  System.out.println(user);
         UserDO userDO = UserConverter.convert2DO(user);
         return userMapper.insertUser(userDO);
     }

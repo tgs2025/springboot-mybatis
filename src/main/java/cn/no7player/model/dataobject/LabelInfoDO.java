@@ -1,6 +1,7 @@
 package cn.no7player.model.dataobject;
 
 /**
+ * 标签表DO
  * Created by tgs on 2018/8/7.
  */
 import java.util.Date;
