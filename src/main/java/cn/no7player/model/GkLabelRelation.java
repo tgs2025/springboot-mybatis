@@ -1,15 +1,13 @@
 package cn.no7player.model;
 
-import cn.no7player.model.enums.GPRIsTarget;
-
 import java.util.Date;
 
 /**
  * Created by tgs on 2018/8/8.
  */
-public class GkParticipantRelation {
+public class GkLabelRelation {
     /**
-     * 关系id
+     * 手办标签id
      */
     private Long id;
     /**
@@ -17,21 +15,13 @@ public class GkParticipantRelation {
      */
     private int gkId;
     /**
-     * 发布者
+     * 标签id
      */
-    private String publishName;
+    private int labelId;
     /**
-     * 参与者id
+     * 标签名
      */
-    private int participantId;
-    /**
-     * 参与者
-     */
-    private String participantName;
-    /**
-     * 是否中奖
-     */
-    private GPRIsTarget isTarget;
+    private String labelName;
     /**
      * 创建时间
      */
@@ -57,36 +47,20 @@ public class GkParticipantRelation {
         this.gkId = gkId;
     }
 
-    public String getPublishName() {
-        return publishName;
+    public int getLabelId() {
+        return labelId;
     }
 
-    public void setPublishName(String publishName) {
-        this.publishName = publishName;
+    public void setLabelId(int labelId) {
+        this.labelId = labelId;
     }
 
-    public int getParticipantId() {
-        return participantId;
+    public String getLabelName() {
+        return labelName;
     }
 
-    public void setParticipantId(int participantId) {
-        this.participantId = participantId;
-    }
-
-    public String getParticipantName() {
-        return participantName;
-    }
-
-    public void setParticipantName(String participantName) {
-        this.participantName = participantName;
-    }
-
-    public GPRIsTarget getIsTarget() {
-        return isTarget;
-    }
-
-    public void setIsTarget(GPRIsTarget isTarget) {
-        this.isTarget = isTarget;
+    public void setLabelName(String labelName) {
+        this.labelName = labelName;
     }
 
     public Date getGmtCreate() {
@@ -112,13 +86,10 @@ public class GkParticipantRelation {
         StringBuilder sb = new StringBuilder();
         sb.append(id == null ? "-" : id).append(", ")
                 .append(gkId).append(", ")
-                .append(publishName == null ? "-" : publishName).append(", ")
-                .append(participantId).append(", ")
-                .append(participantName == null ? "-" : participantName).append(", ")
-                .append(isTarget == null ? "-" : isTarget).append(", ")
+                .append(labelId).append(", ")
+                .append(labelName == null ? "-" : labelName).append(", ")
                 .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
                 .append(gmtModified == null ? "-" : gmtModified);
         return sb.toString();
     }
-
 }

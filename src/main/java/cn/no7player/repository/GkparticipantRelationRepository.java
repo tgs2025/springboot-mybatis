@@ -3,9 +3,9 @@ import cn.no7player.model.GkParticipantRelation;
 /**
  * Created by tgs on 2018/8/8.
  */
-public interface GkparticipantRelationRepository {
+public interface GkParticipantRelationRepository {
     /**
-     * 新增关系
+     * 新增手办参与关系
      *
      * @param gkParticipantRelation
      * @return 关系id

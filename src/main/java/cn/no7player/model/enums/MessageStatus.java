@@ -1,13 +1,12 @@
 package cn.no7player.model.enums;
 
 /**
- * 手办状态
- * Created by tgs on 2018/8/7.
+ * Created by tgs on 2018/8/8.
  */
-public enum GKStatus {
-    PROCESS("PROCSEE", "进行中"),
+public enum MessageStatus {
+    READ("READ", "已读"),
 
-    FINISH("FINSIH", "已结束"),
+    UNREAD("UNREAD", "未读"),
     ;
     private String code;
 
@@ -16,7 +15,7 @@ public enum GKStatus {
      */
     private String desc;
 
-    GKStatus(String code, String desc) {
+    MessageStatus(String code, String desc) {
         this.code = code;
         this.desc = desc;
     }
@@ -33,10 +32,10 @@ public enum GKStatus {
      * @param code
      * @return
      */
-    public static GKStatus getByCode(String code) {
-        for (GKStatus gkStatus : values()) {
-            if (gkStatus.getCode().equals(code)) {
-                return gkStatus;
+    public static MessageStatus getByCode(String code) {
+        for (MessageStatus messageStatus : values()) {
+            if (messageStatus.getCode().equals(code)) {
+                return messageStatus;
             }
         }
         return null;

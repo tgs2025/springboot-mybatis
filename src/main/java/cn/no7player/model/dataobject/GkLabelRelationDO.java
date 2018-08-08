@@ -1,26 +1,28 @@
 package cn.no7player.model.dataobject;
 
-/**
- * 标签表DO
- * Created by tgs on 2018/8/7.
- */
-
 import java.util.Date;
 
-public class LabelInfoDO {
+/**
+ * 手办标签关系表DO
+ * Created by tgs on 2018/8/8.
+ */
+public class GkLabelRelationDO {
     /**
-     * 标签id
+     * 手办标签id
      */
     private Long id;
     /**
+     * 手办id
+     */
+    private int gkId;
+    /**
+     * 标签id
+     */
+    private int labelId;
+    /**
      * 标签名
      */
-    private String name;
-    /**
-     * 是否热门
-     */
-    private String isHot;
-
+    private String labelName;
     /**
      * 创建时间
      */
@@ -38,20 +40,28 @@ public class LabelInfoDO {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public int getGkId() {
+        return gkId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGkId(int gkId) {
+        this.gkId = gkId;
     }
 
-    public String getIsHot() {
-        return isHot;
+    public int getLabelId() {
+        return labelId;
     }
 
-    public void setIsHot(String isHot) {
-        this.isHot = isHot;
+    public void setLabelId(int labelId) {
+        this.labelId = labelId;
+    }
+
+    public String getLabelName() {
+        return labelName;
+    }
+
+    public void setLabelName(String labelName) {
+        this.labelName = labelName;
     }
 
     public Date getGmtCreate() {
@@ -70,4 +80,3 @@ public class LabelInfoDO {
         this.gmtModified = gmtModified;
     }
 }
-

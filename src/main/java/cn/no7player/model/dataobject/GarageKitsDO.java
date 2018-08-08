@@ -8,7 +8,7 @@ package cn.no7player.model.dataobject;
 import java.util.Date;
 
 /**
- * 手伴表do
+ * 手办表do
  *
  * @author enqing.teq
  * @version $Id: GarageKitsDO, v0.1 2018年08月07日 下午12:49 enqing.teq Exp $
@@ -27,7 +27,7 @@ public class GarageKitsDO {
      */
     private int participantsNum;
     /**
-    当前参与人数
+     * 当前参与人数
      */
     private int curParticipantsNum;
     /**
@@ -35,15 +35,15 @@ public class GarageKitsDO {
      */
     private String publisher;
     /**
-    中奖者
+     * 中奖者
      */
     private String targetName;
     /**
-    状态
+     * 状态
      */
-    private String status;
+    private String gkStatus;
     /**
-    图片
+     * 图片
      */
     private String img;
     /**
@@ -51,11 +51,11 @@ public class GarageKitsDO {
      */
     private String type;
     /**
-    创建时间
+     * 创建时间
      */
     private Date gmtCreate;
     /**
-    修改时间
+     * 修改时间
      */
     private Date gmtModified;
 
@@ -113,12 +113,12 @@ public class GarageKitsDO {
         this.targetName = targetName;
     }
 
-    public String getStatus() {
-        return status;
+    public String getGkStatus() {
+        return gkStatus;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setGkStatus(String gkStatus) {
+        this.gkStatus = gkStatus;
     }
 
     public String getImg() {

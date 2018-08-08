@@ -40,7 +40,7 @@ public class GarageKits {
     /**
      * 状态
      */
-    private GKStatus status;
+    private GKStatus gkStatus;
     /**
      图片
      */
@@ -64,8 +64,8 @@ public class GarageKits {
      *
      * @return property value of type
      */
-    public GKStatus getStatus() {
-        return status;
+    public GKStatus getGkStatus() {
+        return gkStatus;
     }
 
 
@@ -82,8 +82,8 @@ public class GarageKits {
         this.type = type;
     }
 
-    public void setStatus(GKStatus status) {
-        this.status = status;
+    public void setGkStatus(GKStatus gkStatus) {
+        this.gkStatus = gkStatus;
     }
 
     public Long getId() {
@@ -157,22 +157,22 @@ public class GarageKits {
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
     }
-//    // todo 添加一个 工具类 用于所有的model
-//    @Override
-//    public String toString() {
-//
-//        StringBuilder sb = new StringBuilder();
-//        sb.append(id == null ? "-" : id).append(", ")
-//                .append(title == null ? "-" : title).append(", ")
-//                .append(participantsNum == null ? "-" : participantsNum).append(", ")
-//                .append(curParticipantsNum == null ? "-" : curParticipantsNum).append(", ")
-//                .append(publisher == null ? "-" : publisher).append(", ")
-//                .append(targetName == null ? "-" : targetName).append(",")
-//                .append(status == null ? "-" : status).append(", ")
-//                .append(img == null ? "-" : img).append(", ")
-//                .append(type == null ? "-" : type).append(", ")
-//                .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
-//                .append(gmtModified == null ? "-" : gmtModified);
-//        return sb.toString();
-//    }
+    // todo 添加一个 工具类 用于所有的model
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(id == null ? "-" : id).append(", ")
+                .append(title == null ? "-" : title).append(", ")
+                .append(participantsNum).append(", ")
+                .append(curParticipantsNum).append(", ")
+                .append(publisher == null ? "-" : publisher).append(", ")
+                .append(targetName == null ? "-" : targetName).append(",")
+                .append(gkStatus == null ? "-" : gkStatus).append(", ")
+                .append(img == null ? "-" : img).append(", ")
+                .append(type == null ? "-" : type).append(", ")
+                .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
+                .append(gmtModified == null ? "-" : gmtModified);
+        return sb.toString();
+    }
 }
