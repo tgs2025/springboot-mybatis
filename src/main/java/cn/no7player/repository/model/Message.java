@@ -1,24 +1,29 @@
-package cn.no7player.model;
+package cn.no7player.repository.model;
+
+import cn.no7player.repository.model.enums.MessageStatus;
 
 import java.util.Date;
 
 /**
- * Created by tgs on 2018/8/7.
+ * Created by tgs on 2018/8/8.
  */
-public class LabelInfo {
+public class Message {
     /**
-     * 标签id
+     * 消息id
      */
     private Long id;
     /**
-     * 标签名
+     * 用户id
      */
-    private String name;
+    private int userId;
     /**
-     * 是否热门
+     * 消息内容
      */
-    private String isHot;
-
+    private String content;
+    /**
+     * 状态
+     */
+    private MessageStatus messageStatus;
     /**
      * 创建时间
      */
@@ -36,20 +41,28 @@ public class LabelInfo {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getIsHot() {
-        return isHot;
+    public String getContent() {
+        return content;
     }
 
-    public void setIsHot(String isHot) {
-        this.isHot = isHot;
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public MessageStatus getMessageStatus() {
+        return messageStatus;
+    }
+
+    public void setMessageStatus(MessageStatus messageStatus) {
+        this.messageStatus = messageStatus;
     }
 
     public Date getGmtCreate() {
@@ -67,15 +80,15 @@ public class LabelInfo {
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
     }
-
     // todo 添加一个 工具类 用于所有的model
     @Override
     public String toString() {
 
         StringBuilder sb = new StringBuilder();
         sb.append(id == null ? "-" : id).append(", ")
-                .append(name == null ? "-" : name).append(", ")
-                .append(isHot ==null ? "-" : isHot).append(", ")
+                .append(userId).append(", ")
+                .append(messageStatus == null ? "-" : messageStatus).append(", ")
+                .append(content == null ? "-" : content).append(", ")
                 .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
                 .append(gmtModified == null ? "-" : gmtModified);
         return sb.toString();

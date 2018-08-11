@@ -1,10 +1,13 @@
-package cn.no7player.service.model.enums;
+package cn.no7player.exceptions.enums;
 
 /**
  * Created by tangenqing on 18/8/8.
  */
 public enum ErrorCode {
     INVALID_PARAMETER("INVALID_PARAMETER", "参数错误"),
+
+    UNKNOWN_ERROR("UNKNOWN_ERROR", "未知错误"),
+
     ;
     private String code;
     private String desc;

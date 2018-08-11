@@ -1,13 +1,11 @@
-package cn.no7player.model.dataobject;
-
-/**
- * 标签表DO
- * Created by tgs on 2018/8/7.
- */
+package cn.no7player.repository.model;
 
 import java.util.Date;
 
-public class LabelInfoDO {
+/**
+ * Created by tgs on 2018/8/7.
+ */
+public class LabelInfo {
     /**
      * 标签id
      */
@@ -69,5 +67,17 @@ public class LabelInfoDO {
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
     }
-}
 
+    // todo 添加一个 工具类 用于所有的model
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(id == null ? "-" : id).append(", ")
+                .append(name == null ? "-" : name).append(", ")
+                .append(isHot ==null ? "-" : isHot).append(", ")
+                .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
+                .append(gmtModified == null ? "-" : gmtModified);
+        return sb.toString();
+    }
+}

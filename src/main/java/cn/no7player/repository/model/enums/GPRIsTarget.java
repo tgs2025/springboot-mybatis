@@ -1,10 +1,11 @@
-package cn.no7player.model.enums;
+package cn.no7player.repository.model.enums;
 
 /**
  * 中奖情况
  * Created by tgs on 2018/8/8.
  */
 public enum GPRIsTarget {
+
     FALSE("FALSE", "false"),
 
     TRUE("TRUE", "true"),

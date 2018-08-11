@@ -1,4 +1,4 @@
-package cn.no7player.service.model.exceptions;
+package cn.no7player.exceptions;
 
 import cn.no7player.service.model.enums.ErrorCode;
 
@@ -8,6 +8,11 @@ import cn.no7player.service.model.enums.ErrorCode;
 public class BaseException  extends RuntimeException{
     private ErrorCode errorCode;
     private String msg;
+
+    public BaseException(ErrorCode errorCode,String msg) {
+        this.errorCode = errorCode;
+        this.msg = msg;
+    }
 
     public ErrorCode getErrorCode() {
         return errorCode;

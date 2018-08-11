@@ -1,4 +1,4 @@
-package cn.no7player.model;
+package cn.no7player.repository.model;
 
 import java.util.Date;
 
@@ -34,6 +34,7 @@ public class GkLabelRelation {
     public Long getId() {
         return id;
     }
+
 
     public void setId(Long id) {
         this.id = id;

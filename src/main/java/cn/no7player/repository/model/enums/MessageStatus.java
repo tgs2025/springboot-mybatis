@@ -1,9 +1,10 @@
-package cn.no7player.model.enums;
+package cn.no7player.repository.model.enums;
 
 /**
  * Created by tgs on 2018/8/8.
  */
 public enum MessageStatus {
+
     READ("READ", "已读"),
 
     UNREAD("UNREAD", "未读"),

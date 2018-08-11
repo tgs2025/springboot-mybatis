@@ -1,6 +1,6 @@
-package cn.no7player.model;
+package cn.no7player.repository.model;
 
-import cn.no7player.model.enums.GPRIsTarget;
+import cn.no7player.repository.model.enums.GPRIsTarget;
 
 import java.util.Date;
 

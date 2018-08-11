@@ -1,13 +1,12 @@
-package cn.no7player.model;
-
-import cn.no7player.model.enums.MessageStatus;
+package cn.no7player.repository.model.dataobject;
 
 import java.util.Date;
 
 /**
+ * 消息表DO
  * Created by tgs on 2018/8/8.
  */
-public class Message {
+public class MessageDO {
     /**
      * 消息id
      */
@@ -23,7 +22,7 @@ public class Message {
     /**
      * 状态
      */
-    private MessageStatus messageStatus;
+    private String messageStatus;
     /**
      * 创建时间
      */
@@ -57,11 +56,11 @@ public class Message {
         this.content = content;
     }
 
-    public MessageStatus getMessageStatus() {
+    public String getMessageStatus() {
         return messageStatus;
     }
 
-    public void setMessageStatus(MessageStatus messageStatus) {
+    public void setMessageStatus(String messageStatus) {
         this.messageStatus = messageStatus;
     }
 
@@ -79,18 +78,5 @@ public class Message {
 
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
-    }
-    // todo 添加一个 工具类 用于所有的model
-    @Override
-    public String toString() {
-
-        StringBuilder sb = new StringBuilder();
-        sb.append(id == null ? "-" : id).append(", ")
-                .append(userId).append(", ")
-                .append(messageStatus == null ? "-" : messageStatus).append(", ")
-                .append(content == null ? "-" : content).append(", ")
-                .append(gmtCreate == null ? "-" : getGmtCreate()).append(", ")
-                .append(gmtModified == null ? "-" : gmtModified);
-        return sb.toString();
     }
 }

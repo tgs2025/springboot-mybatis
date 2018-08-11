@@ -1,13 +1,13 @@
-package cn.no7player.model.enums;
+package cn.no7player.repository.model.enums;
 
 /**
  * 手办状态
  * Created by tgs on 2018/8/7.
  */
 public enum GKStatus {
-    PROCESS("PROCSEE", "进行中"),
+    PROCESS("PROCESS", "进行中"),
 
-    FINISH("FINSIH", "已结束"),
+    FINISH("FINISH", "已结束"),
     ;
     private String code;
 

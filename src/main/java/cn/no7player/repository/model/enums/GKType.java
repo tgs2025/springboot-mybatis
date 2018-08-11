@@ -2,7 +2,7 @@
  * Alipay.com Inc.
  * Copyright (c) 2004-2018 All Rights Reserved.
  */
-package cn.no7player.model.enums;
+package cn.no7player.repository.model.enums;
 
 /**
  * 手伴类型

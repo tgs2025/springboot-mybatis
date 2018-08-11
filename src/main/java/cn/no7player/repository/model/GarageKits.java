@@ -2,10 +2,11 @@
  * Alipay.com Inc.
  * Copyright (c) 2004-2018 All Rights Reserved.
  */
-package cn.no7player.model;
+package cn.no7player.repository.model;
 
-import cn.no7player.model.enums.GKStatus;
-import cn.no7player.model.enums.GKType;
+import cn.no7player.repository.model.enums.GKStatus;
+import cn.no7player.repository.model.enums.GKType;
+
 import java.util.Date;
 
 /**
@@ -13,48 +14,59 @@ import java.util.Date;
  * @version $Id: GarageKits, v0.1 2018年08月07日 下午12:49 enqing.teq Exp $
  */
 public class GarageKits {
+
     /**
      * 手办id
      */
     private Long id;
+
     /**
      * 标题
      */
     private String title;
+
     /**
      * 参与人数
      */
     private int participantsNum;
+
     /**
-     当前参与人数
+     * 当前参与人数
      */
     private int curParticipantsNum;
+
     /**
      * 发布者
      */
     private String publisher;
+
     /**
-     中奖者
+     * 中奖者
      */
     private String targetName;
+
     /**
      * 状态
      */
     private GKStatus gkStatus;
+
     /**
-     图片
+     * 图片
      */
     private String img;
+
     /**
      * 手伴类型
      */
     private GKType type;
+
     /**
-     创建时间
+     * 创建时间
      */
     private Date gmtCreate;
+
     /**
-     修改时间
+     * 修改时间
      */
     private Date gmtModified;
 
@@ -157,6 +169,7 @@ public class GarageKits {
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
     }
+
     // todo 添加一个 工具类 用于所有的model
     @Override
     public String toString() {
