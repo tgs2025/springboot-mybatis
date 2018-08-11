@@ -1,6 +1,6 @@
 package cn.no7player.mapper;
 
-import cn.no7player.model.dataobject.UserDO;
+import cn.no7player.repository.model.dataobject.UserDO;
 
 /**
  * Created by zl on 2015/8/27.

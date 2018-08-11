@@ -1,5 +1,5 @@
 package cn.no7player.mapper;
-import cn.no7player.model.dataobject.GarageKitsDO;
+import cn.no7player.repository.model.dataobject.GarageKitsDO;
 /**
  * Created by tgs on 2018/8/8.
  */

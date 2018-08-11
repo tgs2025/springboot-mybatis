@@ -1,6 +1,6 @@
 package cn.no7player.repository;
 
-import cn.no7player.model.GarageKits;
+import cn.no7player.repository.model.GarageKits;
 
 /**
  * Created by tgs on 2018/8/8.

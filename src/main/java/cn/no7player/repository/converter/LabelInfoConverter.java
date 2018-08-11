@@ -1,7 +1,7 @@
 package cn.no7player.repository.converter;
 
-import cn.no7player.model.LabelInfo;
-import cn.no7player.model.dataobject.LabelInfoDO;
+import cn.no7player.repository.model.LabelInfo;
+import cn.no7player.repository.model.dataobject.LabelInfoDO;
 
 /**
  * Created by tgs on 2018/8/7.

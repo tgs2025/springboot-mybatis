@@ -1,6 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-</beans>
+<mapper namespace="cn.no7player.mapper.GkParticipantRelationMapper">
+    <resultMap id="GkParticipantRelationResultMap" type="cn.no7player.repository.model.dataobject.GkParticipantRelationDO">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="gk_id" property="gkId" jdbcType="INTEGER"/>
+        <result column="publish_name" property="publishName" jdbcType="VARCHAR"/>
+        <result column="participant_id" property="participantId" jdbcType="VARCHAR"/>
+        <result column="participant_name" property="participantName" jdbcType="VARCHAR"/>
+        <result column="is_target" property="isTarget" jdbcType="VARCHAR"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="DATE"/>
+        <result column="gmt_modified" property="gmtModified" jdbcType="DATE"/>
+    </resultMap>
+
+    <insert id="insertGkParticipantRelation" parameterType="cn.no7player.repository.model.dataobject.GkParticipantRelationDO">
+        insert into gk_participant_relation (gk_id,publish_name,participant_id,participant_name,is_target,gmt_create,gmt_modified)
+        values (#{gkId},#{publishName},#{participantId},#{participantName},#{isTarget},#{gmtCreate},#{gmtModified})
+    </insert>
+
+    <select id="selectById" resultMap="GkParticipantRelationResultMap" parameterType="java.lang.Long">
+        select id,gk_id,publish_name,participant_id,participant_name,is_target,gmt_create,gmt_modified
+        from gk_participant_relation
+        where id = #{id}
+    </select>
+</mapper>

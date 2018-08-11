@@ -6,6 +6,11 @@ package cn.no7player.exceptions.enums;
 public enum ErrorCode {
     INVALID_PARAMETER("INVALID_PARAMETER", "参数错误"),
 
+    //msg可以直接告知用户
+    BIZ_ERROR("BIZ_ERROR", "业务异常"),
+
+    SYSTEM_ERROR("SYSTEM_ERROR", "系统异常"),
+
     UNKNOWN_ERROR("UNKNOWN_ERROR", "未知错误"),
 
     ;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.no7player.mapper.MessageMapper">
+    <resultMap id="MessageResultMap" type="cn.no7player.model.dataobject.MessageDO">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="status" property="messageStatus" jdbcType="VARCHAR"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="DATE"/>
+        <result column="gmt_modified" property="gmtModified" jdbcType="DATE"/>
+    </resultMap>
+
+    <insert id="insertMessage" parameterType="cn.no7player.model.dataobject.MessageDO">
+        insert into message (user_id,content,status,gmt_create,gmt_modified)
+        values (#{userId},#{content},#{messageStatus},#{gmtCreate},#{gmtModified})
+    </insert>
+
+    <select id="selectById" resultMap="MessageResultMap" parameterType="java.lang.Long">
+        select id,user_id,content,status,gmt_create,gmt_modified
+        from message
+        where id = #{id}
+    </select>
+</mapper>

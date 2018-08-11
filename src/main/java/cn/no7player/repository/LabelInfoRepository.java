@@ -1,6 +1,6 @@
 package cn.no7player.repository;
 
-import cn.no7player.model.LabelInfo;
+import cn.no7player.repository.model.LabelInfo;
 
 /**
  * Created by tgs on 2018/8/7.

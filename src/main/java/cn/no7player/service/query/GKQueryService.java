@@ -1,6 +1,5 @@
 package cn.no7player.service.query;
 
-import cn.no7player.model.GarageKits;
 import cn.no7player.service.model.GKDTO;
 import cn.no7player.service.model.request.GKQueryRequest;
 import cn.no7player.service.model.result.BatchQueryResult;

@@ -1,7 +1,7 @@
 package cn.no7player.repository.converter;
 
-import cn.no7player.model.User;
-import cn.no7player.model.dataobject.UserDO;
+import cn.no7player.repository.model.User;
+import cn.no7player.repository.model.dataobject.UserDO;
 
 /**
  * 用户表 模型和do转换器

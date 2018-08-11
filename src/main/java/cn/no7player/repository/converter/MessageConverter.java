@@ -1,10 +1,10 @@
 package cn.no7player.repository.converter;
 
 
-import cn.no7player.model.Message;
+import cn.no7player.repository.model.Message;
 
-import cn.no7player.model.dataobject.MessageDO;
-import cn.no7player.model.enums.MessageStatus;
+import cn.no7player.repository.model.dataobject.MessageDO;
+import cn.no7player.repository.model.enums.MessageStatus;
 
 /**
  * 消息表模型 和do转换器

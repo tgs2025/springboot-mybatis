@@ -1,8 +1,8 @@
 package cn.no7player.repository.impl;
 
 import cn.no7player.mapper.GkLabelRelationMapper;
-import cn.no7player.model.GkLabelRelation;
-import cn.no7player.model.dataobject.GkLabelRelationDO;
+import cn.no7player.repository.model.GkLabelRelation;
+import cn.no7player.repository.model.dataobject.GkLabelRelationDO;
 import cn.no7player.repository.GkLabelRelationRepository;
 import cn.no7player.repository.converter.GkLabelRelationConverter;
 import org.springframework.beans.factory.annotation.Autowired;

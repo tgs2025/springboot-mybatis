@@ -1,7 +1,7 @@
 package cn.no7player.repository.converter;
 
-import cn.no7player.model.GkLabelRelation;
-import cn.no7player.model.dataobject.GkLabelRelationDO;
+import cn.no7player.repository.model.GkLabelRelation;
+import cn.no7player.repository.model.dataobject.GkLabelRelationDO;
 
 /**
  * 手办标签关系表模型和do转换器

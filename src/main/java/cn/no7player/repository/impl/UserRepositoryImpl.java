@@ -1,8 +1,8 @@
 package cn.no7player.repository.impl;
 
 import cn.no7player.mapper.UserMapper;
-import cn.no7player.model.User;
-import cn.no7player.model.dataobject.UserDO;
+import cn.no7player.repository.model.User;
+import cn.no7player.repository.model.dataobject.UserDO;
 import cn.no7player.repository.UserRepository;
 import cn.no7player.repository.converter.UserConverter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,6 @@ public class UserRepositoryImpl implements UserRepository {
     public Long insert(User user) {
         user.setGmtCreate(new Date());
         user.setGmtModified(new Date());
-        //  System.out.println(user);
         UserDO userDO = UserConverter.convert2DO(user);
         return userMapper.insertUser(userDO);
     }

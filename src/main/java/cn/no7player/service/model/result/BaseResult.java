@@ -4,6 +4,7 @@ package cn.no7player.service.model.result;
  * Created by tangenqing on 18/8/8.
  */
 public abstract class BaseResult {
+
     private Boolean success;
 
     private String ErrCode;

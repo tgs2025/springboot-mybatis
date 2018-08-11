@@ -1,8 +1,8 @@
 package cn.no7player.repository.impl;
 
 import cn.no7player.mapper.MessageMapper;
-import cn.no7player.model.Message;
-import cn.no7player.model.dataobject.MessageDO;
+import cn.no7player.repository.model.Message;
+import cn.no7player.repository.model.dataobject.MessageDO;
 import cn.no7player.repository.MessageRepository;
 import cn.no7player.repository.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,10 +4,10 @@
  */
 package cn.no7player.repository.converter;
 
-import cn.no7player.model.GarageKits;
-import cn.no7player.model.dataobject.GarageKitsDO;
-import cn.no7player.model.enums.GKStatus;
-import cn.no7player.model.enums.GKType;
+import cn.no7player.repository.model.GarageKits;
+import cn.no7player.repository.model.dataobject.GarageKitsDO;
+import cn.no7player.repository.model.enums.GKStatus;
+import cn.no7player.repository.model.enums.GKType;
 
 /**
  * 手办表 模型和do转换器

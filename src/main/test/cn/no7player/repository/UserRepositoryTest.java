@@ -1,7 +1,7 @@
 package cn.no7player.repository;
 
 import cn.no7player.Application;
-import cn.no7player.model.User;
+import cn.no7player.repository.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 /**
- * 用户表仓促层测试类
+ * 用户表仓储层测试类
  * Created by tangenqing on 18/8/6.
  */
 @RunWith(SpringJUnit4ClassRunner.class)

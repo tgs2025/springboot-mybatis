@@ -1,17 +1,19 @@
 package cn.no7player.repository.impl;
 
 import cn.no7player.mapper.GkParticipantRelationMapper;
-import cn.no7player.model.GkParticipantRelation;
-import cn.no7player.model.dataobject.GkParticipantRelationDO;
+import cn.no7player.repository.model.GkParticipantRelation;
+import cn.no7player.repository.model.dataobject.GkParticipantRelationDO;
 import cn.no7player.repository.GkParticipantRelationRepository;
 import cn.no7player.repository.converter.GkParticipantRelationConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 /**
  * Created by tgs on 2018/8/8.
  */
+@Service
 public class GkParticipantRelationRepositorylmpl implements GkParticipantRelationRepository {
     @Autowired
     private GkParticipantRelationMapper gkParticipantRelationMapper;

@@ -1,6 +1,6 @@
 package cn.no7player.service.query;
 
-import cn.no7player.model.User;
+import cn.no7player.repository.model.User;
 import cn.no7player.service.query.request.UserQueryRequest;
 
 /**

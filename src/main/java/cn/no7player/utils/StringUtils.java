@@ -19,6 +19,16 @@ public class StringUtils {
 
     }
 
+    public static boolean isEmpty(String s){
+        if(s == null){
+            return true;
+        }
+        if(s.trim().equals("")){
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         String a = null;
         System.out.println(StringUtils.equals(a, null));

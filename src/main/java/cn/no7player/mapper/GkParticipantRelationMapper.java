@@ -1,5 +1,5 @@
 package cn.no7player.mapper;
-import cn.no7player.model.dataobject.GkParticipantRelationDO;
+import cn.no7player.repository.model.dataobject.GkParticipantRelationDO;
 /**
  * Created by tgs on 2018/8/8.
  */

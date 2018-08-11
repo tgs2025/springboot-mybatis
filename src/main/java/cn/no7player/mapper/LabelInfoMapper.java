@@ -4,7 +4,7 @@ package cn.no7player.mapper;
  * Created by tgs on 2018/8/7.
  */
 
-import cn.no7player.model.dataobject.LabelInfoDO;
+import cn.no7player.repository.model.dataobject.LabelInfoDO;
 
 
 public interface LabelInfoMapper {

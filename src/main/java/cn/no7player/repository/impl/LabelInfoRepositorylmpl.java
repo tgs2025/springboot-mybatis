@@ -5,8 +5,8 @@ package cn.no7player.repository.impl;
  */
 import cn.no7player.mapper.LabelInfoMapper;
 
-import cn.no7player.model.LabelInfo;
-import cn.no7player.model.dataobject.LabelInfoDO;
+import cn.no7player.repository.model.LabelInfo;
+import cn.no7player.repository.model.dataobject.LabelInfoDO;
 import cn.no7player.repository.LabelInfoRepository;
 import cn.no7player.repository.converter.LabelInfoConverter;
 import org.springframework.beans.factory.annotation.Autowired;

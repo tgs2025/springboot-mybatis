@@ -1,8 +1,8 @@
 package cn.no7player.repository.converter;
 
-import cn.no7player.model.GkParticipantRelation;
-import cn.no7player.model.dataobject.GkParticipantRelationDO;
-import cn.no7player.model.enums.GPRIsTarget;
+import cn.no7player.repository.model.GkParticipantRelation;
+import cn.no7player.repository.model.dataobject.GkParticipantRelationDO;
+import cn.no7player.repository.model.enums.GPRIsTarget;
 
 /**
  * 手办关系参与表模型 和do转换器

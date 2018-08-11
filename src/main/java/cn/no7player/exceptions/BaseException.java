@@ -1,6 +1,6 @@
 package cn.no7player.exceptions;
 
-import cn.no7player.service.model.enums.ErrorCode;
+import cn.no7player.exceptions.enums.ErrorCode;
 
 /**
  * Created by tangenqing on 18/8/9.

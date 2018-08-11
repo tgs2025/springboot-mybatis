@@ -4,9 +4,8 @@ import cn.no7player.repository.GarageKitsRepository;
 import org.springframework.stereotype.Service;
 import cn.no7player.mapper.GarageKitsMapper;
 
-import cn.no7player.model.GarageKits;
-import cn.no7player.model.dataobject.GarageKitsDO;
-import cn.no7player.repository.GarageKitsRepository;
+import cn.no7player.repository.model.GarageKits;
+import cn.no7player.repository.model.dataobject.GarageKitsDO;
 import cn.no7player.repository.converter.GarageKitsConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,6 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-</beans>
+<mapper namespace="cn.no7player.mapper.GkLabelRelationMapper">
+    <resultMap id="GkLabelRelationResultMap" type="cn.no7player.repository.model.dataobject.GkLabelRelationDO">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="gk_id" property="gkId" jdbcType="INTEGER"/>
+        <result column="label_id" property="labelId" jdbcType="INTEGER"/>
+        <result column="label_name" property="labelName" jdbcType="VARCHAR"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="DATE"/>
+        <result column="gmt_modified" property="gmtModified" jdbcType="DATE"/>
+    </resultMap>
+
+    <insert id="insertGkLabelRelation" parameterType="cn.no7player.repository.model.dataobject.GkLabelRelationDO">
+        insert into gk_lable_relation (gk_id,label_id,label_name,gmt_create,gmt_modified)
+        values (#{gkId},#{labelId},#{labelName},#{gmtCreate},#{gmtModified})
+    </insert>
+
+    <select id="selectById" resultMap="GkLabelRelationResultMap" parameterType="java.lang.Long">
+        select id,gk_id,label_id,label_name,gmt_create,gmt_modified
+        from gk_lable_relation
+        where id = #{id}
+    </select>
+</mapper>

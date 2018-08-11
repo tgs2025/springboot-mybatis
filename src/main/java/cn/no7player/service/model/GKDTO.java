@@ -1,7 +1,7 @@
 package cn.no7player.service.model;
 
-import cn.no7player.model.GarageKits;
-import cn.no7player.model.LabelInfo;
+import cn.no7player.repository.model.GarageKits;
+import cn.no7player.repository.model.LabelInfo;
 
 import java.util.List;
 

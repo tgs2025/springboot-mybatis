@@ -1,5 +1,5 @@
 package cn.no7player.repository;
-import cn.no7player.model.GkParticipantRelation;
+import cn.no7player.repository.model.GkParticipantRelation;
 /**
  * Created by tgs on 2018/8/8.
  */

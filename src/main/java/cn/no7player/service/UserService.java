@@ -1,6 +1,6 @@
 package cn.no7player.service;
 
-import cn.no7player.model.User;
+import cn.no7player.repository.model.User;
 import cn.no7player.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
