@@ -10,6 +10,9 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 消息表仓储层测试类
  * Created by tgs on 2018/8/9.
@@ -34,5 +37,15 @@ public class MessageRepositoryTest {
         message.setContent("content test");
 
         messageRepository.insert(message);
+    }
+    @Test
+    public void updateStatus2ReadTest(){
+
+        List<Long> mids = new ArrayList<>();
+        mids.add(1L);
+        Long id2 = new Long(2);
+        mids.add(id2);
+
+        messageRepository.updateStatus2Read(mids);
     }
 }

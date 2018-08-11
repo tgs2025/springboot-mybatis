@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by tgs on 2018/8/8.
@@ -17,6 +18,7 @@ import java.util.Date;
 public class MessageRepositorylmpl implements MessageRepository {
     @Autowired
     private MessageMapper messageMapper;
+
     @Override
     public Long insert(Message message) {
         message.setGmtCreate(new Date());
@@ -31,4 +33,11 @@ public class MessageRepositorylmpl implements MessageRepository {
         MessageDO messageDO = messageMapper.selectById(id);
         return MessageConverter.convert2Model(messageDO);
     }
+
+    @Override
+    public int updateStatus2Read(List<Long> messageIds) {
+
+        return messageMapper.updateStatus2Read(messageIds);
+    }
+
 }

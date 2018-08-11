@@ -21,4 +21,5 @@ public interface UserRepository {
      * @return 用户模型
      */
     User queryById(long id);
+
 }
