@@ -22,4 +22,11 @@ public interface UserMapper {
      */
     UserDO selectById(Long id);
 
+    /**
+     * 更新消息
+     * @param address
+     * @return
+     */
+    String updateAddress(String address);
+
 }

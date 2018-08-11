@@ -32,4 +32,9 @@ public class UserRepositoryImpl implements UserRepository {
         UserDO userDO = userMapper.selectById(id);
         return UserConverter.convert2Model(userDO);
     }
+
+    @Override
+    public String updateAddress(String address) {
+        return userMapper.updateAddress(address);
+    }
 }

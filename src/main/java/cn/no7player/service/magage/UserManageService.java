@@ -1,6 +1,7 @@
 package cn.no7player.service.magage;
 
 import cn.no7player.service.model.request.ReadedMessageRequest;
+import cn.no7player.service.model.request.UpdateAddressRequest;
 import cn.no7player.service.model.request.UserCreateRequest;
 import cn.no7player.service.model.result.ApiResult;
 import cn.no7player.service.model.result.BaseResult;
@@ -31,5 +32,11 @@ public interface UserManageService {
     //添加地址
 //    updateAddress();
 
+    /**
+     * 添加地址
+     * @param updateAddressRequest
+     * @return
+     */
+    BaseResult updateAddress(UpdateAddressRequest updateAddressRequest);
 
 }

@@ -8,6 +8,7 @@ import cn.no7player.service.magage.UserManageService;
 import cn.no7player.exceptions.enums.ErrorCode;
 import cn.no7player.exceptions.BaseException;
 import cn.no7player.service.model.request.ReadedMessageRequest;
+import cn.no7player.service.model.request.UpdateAddressRequest;
 import cn.no7player.service.model.request.UserCreateRequest;
 import cn.no7player.service.model.result.ApiResult;
 import cn.no7player.service.model.result.BaseResult;
@@ -66,6 +67,24 @@ public  class UserManageServiceImpl implements UserManageService {
 
     }
 
+
+
+    @Override
+    public  BaseResult updateAddress(UpdateAddressRequest request){
+        try {
+            //参数校验
+            check(request);
+            //执行业务
+            String address =userRepository.updateAddress(request.getAddress());
+            //返回结果
+            BaseResult result = ResultUtils.createSuccResult(BaseResult.class);
+            return  result;
+        }catch (Exception e)
+        {
+            return ResultUtils.createFailResultByException(e,BaseResult.class);
+        }
+    }
+
     /**
      * 请求转换成用户模型
      *
@@ -107,6 +126,13 @@ public  class UserManageServiceImpl implements UserManageService {
         if(StringUtils.isEmpty(request.getUserName())){
             throw new BaseException(ErrorCode.INVALID_PARAMETER, "用户名不能为空");
         }
-
     }
+    private void  check(UpdateAddressRequest request){
+        if (request == null) {
+            throw new BaseException(ErrorCode.INVALID_PARAMETER,"地址不能为空");
+        }
+        if (request.getId()== null){
+            throw new BaseException(ErrorCode.INVALID_PARAMETER,"用户id不能为空");
+        }
+}
 }

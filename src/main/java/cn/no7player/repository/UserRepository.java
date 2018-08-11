@@ -22,4 +22,11 @@ public interface UserRepository {
      */
     User queryById(long id);
 
+    /**
+     * 更新地址
+     * @param address
+     * @return
+     */
+   String updateAddress(String address);
+
 }

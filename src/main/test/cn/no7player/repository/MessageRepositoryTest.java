@@ -49,4 +49,5 @@ public class MessageRepositoryTest {
         int num = messageRepository.updateStatus2Read(mids);
         System.out.println(num);
     }
+
 }

@@ -35,6 +35,11 @@ public class UserRepositoryTest {
         user.setAddress("address-test");
         userRepository.insert(user);
     }
-
+    @Test
+    public void updateAddressTest(){
+        String add = "test";
+            Long id =1L;
+        userRepository.updateAddress(add);
+    }
 
 }
