@@ -26,7 +26,10 @@ public interface UserManageService {
      * @return
      */
     BaseResult readedMessageByUser(ReadedMessageRequest userReadRequest);
+
+
     //添加地址
+//    updateAddress();
 
 
 }

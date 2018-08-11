@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="cn.no7player.mapper.GkParticipantRelationMapper">
-    <resultMap id="GkParticipantRelationResultMap" type="cn.no7player.model.dataobject.GkParticipantRelationDO">
+    <resultMap id="GkParticipantRelationResultMap" type="cn.no7player.repository.model.dataobject.GkParticipantRelationDO">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="gk_id" property="gkId" jdbcType="INTEGER"/>
         <result column="publish_name" property="publishName" jdbcType="VARCHAR"/>
@@ -13,7 +13,7 @@
         <result column="gmt_modified" property="gmtModified" jdbcType="DATE"/>
     </resultMap>
 
-    <insert id="insertGkParticipantRelation" parameterType="cn.no7player.model.dataobject.GkParticipantRelationDO">
+    <insert id="insertGkParticipantRelation" parameterType="cn.no7player.repository.model.dataobject.GkParticipantRelationDO">
         insert into gk_participant_relation (gk_id,publish_name,participant_id,participant_name,is_target,gmt_create,gmt_modified)
         values (#{gkId},#{publishName},#{participantId},#{participantName},#{isTarget},#{gmtCreate},#{gmtModified})
     </insert>

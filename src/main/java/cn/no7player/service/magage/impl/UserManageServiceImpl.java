@@ -53,10 +53,11 @@ public  class UserManageServiceImpl implements UserManageService {
         try {
             //参数校验
             check(request);
-            //执行业务
 
+            //执行业务
             int mid = messageRepository.updateStatus2Read(request.getMessageIds());
             //返回结果
+
             BaseResult result = ResultUtils.createSuccResult(BaseResult.class);
             return result;
         }catch(Exception e){

@@ -23,7 +23,11 @@
         where id = #{id}
     </select>
 
-    <update id="updateStatus2Read" >
-        UPDATE message SET stattus = "read" WHERE id =1
+    <update id="updateStatus2Read" parameterType="java.util.List">
+        UPDATE message SET status = "READ" WHERE id in (
+        <foreach collection="list" item="id" index="index" separator=",">
+            #{id}
+        </foreach>
+        )
      </update>
 </mapper>

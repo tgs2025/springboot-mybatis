@@ -46,6 +46,7 @@ public class MessageRepositoryTest {
         Long id2 = new Long(2);
         mids.add(id2);
 
-        messageRepository.updateStatus2Read(mids);
+        int num = messageRepository.updateStatus2Read(mids);
+        System.out.println(num);
     }
 }
