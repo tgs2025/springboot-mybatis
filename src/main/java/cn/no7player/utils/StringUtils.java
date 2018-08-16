@@ -1,5 +1,7 @@
 package cn.no7player.utils;
 
+import cn.no7player.repository.model.enums.GKType;
+
 /**
  * Created by tgs on 2018/8/7.
  */
@@ -28,6 +30,9 @@ public class StringUtils {
         }
         return false;
     }
+
+
+
 
     public static void main(String[] args) {
         String a = null;
