@@ -24,9 +24,9 @@ public interface UserMapper {
 
     /**
      * 更新消息
-     * @param address
+     * @param userDO
      * @return
      */
-    String updateAddress(String address);
+    int updateAddress(UserDO userDO);
 
 }

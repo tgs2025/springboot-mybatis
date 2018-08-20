@@ -1,11 +1,11 @@
 package cn.no7player.repository.impl;
 
-import cn.no7player.exceptions.BaseException;
 import cn.no7player.mapper.UserMapper;
-import cn.no7player.repository.model.User;
-import cn.no7player.repository.model.dataobject.UserDO;
 import cn.no7player.repository.UserRepository;
 import cn.no7player.repository.converter.UserConverter;
+import cn.no7player.repository.model.User;
+import cn.no7player.repository.model.dataobject.UserDO;
+import cn.no7player.service.model.request.UpdateUserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,11 +35,15 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public int updateAddress(String address) {
+    public int updateAddress(UpdateUserRequest request) {
         //get usedo
         //update do
         //mapper update
-         int affectedRows = userMapper.updateAddress(address);
-         return affectedRows;
+        UserDO userDO = userMapper.selectById(request.getId());
+        userDO.setTelphone(request.getTelephone());
+        userDO.setAddress(request.getAddress());
+        userDO.setGmtModified(new Date());
+        return userMapper.updateAddress(userDO);
+
     }
 }

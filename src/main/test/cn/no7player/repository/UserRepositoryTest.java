@@ -2,6 +2,7 @@ package cn.no7player.repository;
 
 import cn.no7player.Application;
 import cn.no7player.repository.model.User;
+import cn.no7player.service.model.request.UpdateUserRequest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,9 +38,11 @@ public class UserRepositoryTest {
     }
     @Test
     public void updateAddressTest(){
-        String add = "test";
-            Long id =1L;
-        userRepository.updateAddress(add);
+        UpdateUserRequest request = new UpdateUserRequest();
+        request.setId(1L);
+        request.setAddress("asddiwd");
+        request.setTelephone("123dsjha345");
+        System.out.println(userRepository.updateAddress(request));
     }
 
 }

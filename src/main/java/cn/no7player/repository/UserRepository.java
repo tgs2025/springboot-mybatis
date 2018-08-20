@@ -1,6 +1,7 @@
 package cn.no7player.repository;
 
 import cn.no7player.repository.model.User;
+import cn.no7player.service.model.request.UpdateUserRequest;
 
 /**
  * Created by tangenqing on 18/8/6.
@@ -24,9 +25,9 @@ public interface UserRepository {
 
     /**
      * 更新地址
-     * @param address
+     * @param
      * @return
      */
-   int updateAddress(String address);
+   int updateAddress(UpdateUserRequest request);
 
 }

@@ -19,11 +19,12 @@
     </insert>
 
     <select id="selectById" resultMap="UserResultMap" parameterType="java.lang.Long">
-  select id,name,password,telphone,address,gmt_create,gmt_modified
-  from user
-  where id = #{id}
- </select>
-    <update id="updateAddress" parameterType="cn.no7player.repository.model.User">
-        UPDATE user SET address = #{address} WHERE id =#{id}
+    select id,name,password,telphone,address,gmt_create,gmt_modified
+    from user
+    where id = #{id}
+    </select>
+
+    <update id="updateAddress" parameterType="cn.no7player.repository.model.dataobject.UserDO">
+        UPDATE user SET address = #{address}, telphone=#{telphone}, gmt_modified = #{gmtModified} WHERE id =#{id}
     </update>
 </mapper>
