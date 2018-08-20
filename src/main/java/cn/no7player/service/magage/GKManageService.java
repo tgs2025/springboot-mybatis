@@ -1,6 +1,7 @@
 package cn.no7player.service.magage;
 
 import cn.no7player.service.model.request.GKPublishRequest;
+import cn.no7player.service.model.request.GKParticipatesRequest;
 import cn.no7player.service.model.result.BaseResult;
 
 /**
@@ -17,6 +18,12 @@ public interface GKManageService {
     BaseResult gkPublish(GKPublishRequest gkPublishRequest);
     //参与手办服务
 
+    /**
+     * 参与手办
+     * @param GKParticipatesRequest
+     * @return
+     */
+    BaseResult gkParticipates(GKParticipatesRequest GKParticipatesRequest);
 
     //可能异常:已经参与过了,  达到人数了,  已经结束 事务
 
