@@ -12,7 +12,7 @@ public class GKParticipatesRequest {
      * 参与者name
      */
     private String name;
-   
+
 
     public int getId() {
         return id;
