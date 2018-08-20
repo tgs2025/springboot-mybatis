@@ -20,8 +20,14 @@ import cn.no7player.utils.StringUtils;
  * Created by tgs on 2018/8/14.
  */
 public class GKManageServicelmpl implements GKManageService {
+
+    /**
+     * 注释
+     */
     private GarageKitsRepository garageKitsRepository;
+
     private LabelInfoRepository labelInfoRepository;
+
     private GkParticipantRelationRepository gkParticipantRelationRepository;
 
     @Override

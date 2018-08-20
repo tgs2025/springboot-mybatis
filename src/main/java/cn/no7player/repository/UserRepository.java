@@ -27,6 +27,6 @@ public interface UserRepository {
      * @param address
      * @return
      */
-   String updateAddress(String address);
+   int updateAddress(String address);
 
 }

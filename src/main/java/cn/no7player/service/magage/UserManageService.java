@@ -1,7 +1,7 @@
 package cn.no7player.service.magage;
 
 import cn.no7player.service.model.request.ReadedMessageRequest;
-import cn.no7player.service.model.request.UpdateAddressRequest;
+import cn.no7player.service.model.request.UpdateUserRequest;
 import cn.no7player.service.model.request.UserCreateRequest;
 import cn.no7player.service.model.result.ApiResult;
 import cn.no7player.service.model.result.BaseResult;
@@ -19,24 +19,19 @@ public interface UserManageService {
      */
     ApiResult createUser(UserCreateRequest request);
 
-    //消息已读
 
     /**
-     * 消息更新
-     * @param userReadRequest
+     * 消息更新为已读
+     * @param request
      * @return
      */
-    BaseResult readedMessageByUser(ReadedMessageRequest userReadRequest);
-
-
-    //添加地址
-//    updateAddress();
+    BaseResult readedMessageByUser(ReadedMessageRequest request);
 
     /**
-     * 添加地址
-     * @param updateAddressRequest
+     * 添加地址和电话
+     * @param request
      * @return
      */
-    BaseResult updateAddress(UpdateAddressRequest updateAddressRequest);
+    BaseResult updateUser(UpdateUserRequest request);
 
 }
