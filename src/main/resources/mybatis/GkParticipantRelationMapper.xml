@@ -23,4 +23,13 @@
         from gk_participant_relation
         where id = #{id}
     </select>
+
+    <select id="selectSuccRelationBySize" resultMap="GkParticipantRelationResultMap" parameterType="java.lang.Integer">
+        select id,gk_id,publish_name,participant_id,participant_name,is_target,gmt_create,gmt_modified
+        from gk_participant_relation
+        where is_target = 'true'
+        order by gmt_modified DESC
+        limit #{size}
+    </select>
+
 </mapper>
