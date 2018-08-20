@@ -15,6 +15,7 @@ import cn.no7player.service.model.request.GKParticipatesRequest;
 import cn.no7player.service.model.request.GKPublishRequest;
 import cn.no7player.service.model.result.ApiResult;
 import cn.no7player.service.model.result.BaseResult;
+import cn.no7player.utils.CollectionUtils;
 import cn.no7player.utils.ResultUtils;
 import cn.no7player.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,7 +68,13 @@ public class GKManageServicelmpl implements GKManageService {
 
 
     private List<GkLabelRelation> convertReq2Model1(List<LabelInfo> labels, Long gid) {
-        
+        if(CollectionUtils.isEmpty(labels)){
+            return new ArrayList<>();
+        }
+        List<GkLabelRelation> result = new ArrayList<>();
+        GkLabelRelation gkLabelRelation = new GkLabelRelation();
+        result.add(gkLabelRelation);
+        return result;
     }
 
     @Override
