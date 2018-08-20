@@ -20,8 +20,14 @@ import cn.no7player.utils.StringUtils;
  * Created by tgs on 2018/8/14.
  */
 public class GKManageServicelmpl implements GKManageService {
+
+    /**
+     * 注释
+     */
     private GarageKitsRepository garageKitsRepository;
+
     private LabelInfoRepository labelInfoRepository;
+
     private GkParticipantRelationRepository gkParticipantRelationRepository;
 
     @Override
@@ -86,6 +92,7 @@ public class GKManageServicelmpl implements GKManageService {
     private LabelInfo convertReq2Model1(GKPublishRequest request) {
         LabelInfo labelInfo = new LabelInfo();
         labelInfo.setName(request.getLabels());
+        return null;
 
     }
 
@@ -99,13 +106,13 @@ public class GKManageServicelmpl implements GKManageService {
         if (StringUtils.isEmpty(request.getImg())) {
             throw new BaseException(ErrorCode.INVALID_PARAMETER, "图片不能为空");
         }
-        if () {
-            throw new BaseException(ErrorCode.INVALID_PARAMETER, "参与人数不能为空");
-        }
+//        if () {
+//            throw new BaseException(ErrorCode.INVALID_PARAMETER, "参与人数不能为空");
+//        }
 
-        if (StringUtils.isEmpty(request.getType())) {
-            throw new BaseException(ErrorCode.INVALID_PARAMETER, "类型不能为空");
-        }
+//        if (StringUtils.isEmpty(request.getType())) {
+//            throw new BaseException(ErrorCode.INVALID_PARAMETER, "类型不能为空");
+//        }
         if (StringUtils.isEmpty(request.getLabels())) {
             throw new BaseException(ErrorCode.INVALID_PARAMETER, "标签不能为空");
         }

@@ -2,6 +2,7 @@ package cn.no7player.utils;
 
 import cn.no7player.exceptions.enums.ErrorCode;
 import cn.no7player.exceptions.BaseException;
+import cn.no7player.service.model.result.ApiResult;
 import cn.no7player.service.model.result.BaseResult;
 
 /**
@@ -14,6 +15,7 @@ public class ResultUtils {
         result.setSuccess(Boolean.TRUE);
         return result;
     }
+
 
     public static <T extends BaseResult> T createFailResult(Class<T> clazz) {
         T result = createSuccResult(clazz);

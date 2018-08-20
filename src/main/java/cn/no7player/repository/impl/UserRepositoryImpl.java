@@ -1,5 +1,6 @@
 package cn.no7player.repository.impl;
 
+import cn.no7player.exceptions.BaseException;
 import cn.no7player.mapper.UserMapper;
 import cn.no7player.repository.model.User;
 import cn.no7player.repository.model.dataobject.UserDO;
@@ -34,7 +35,11 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public String updateAddress(String address) {
-        return userMapper.updateAddress(address);
+    public int updateAddress(String address) {
+        //get usedo
+        //update do
+        //mapper update
+         int affectedRows = userMapper.updateAddress(address);
+         return affectedRows;
     }
 }

@@ -1,7 +1,5 @@
 package cn.no7player.utils;
 
-import cn.no7player.repository.model.enums.GKType;
-
 /**
  * Created by tgs on 2018/8/7.
  */
@@ -21,17 +19,15 @@ public class StringUtils {
 
     }
 
-    public static boolean isEmpty(String s){
-        if(s == null){
+    public static boolean isEmpty(String s) {
+        if (s == null) {
             return true;
         }
-        if(s.trim().equals("")){
+        if (s.trim().equals("")) {
             return true;
         }
         return false;
     }
-
-
 
 
     public static void main(String[] args) {
