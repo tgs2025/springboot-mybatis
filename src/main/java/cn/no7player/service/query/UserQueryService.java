@@ -8,10 +8,8 @@ import cn.no7player.service.query.request.UserQueryRequest;
  */
 public interface UserQueryService {
 
-    //用户信息
+    //用户基本信息
     User queryUser(UserQueryRequest request);
 
-    //用户贡献榜查询
-
-    //单纯用户消息查询
+    //用户信息+消息查询
 }

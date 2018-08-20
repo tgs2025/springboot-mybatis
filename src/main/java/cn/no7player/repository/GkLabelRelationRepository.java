@@ -14,6 +14,8 @@ public interface GkLabelRelationRepository {
      */
     Long insert(GkLabelRelation gkLabelRelation);
 
+
+
     /**
      * 基于用户id搜索
      *

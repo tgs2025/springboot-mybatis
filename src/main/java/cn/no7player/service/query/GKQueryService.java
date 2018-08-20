@@ -23,4 +23,7 @@ public interface GKQueryService {
      * @return
      */
     BatchQueryResult<GKDTO> queryNewGKByType(GKQueryRequest request);
+
+    //基于用户的手办查询
+    //用户的发布 用户的参与
 }

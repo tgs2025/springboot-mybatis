@@ -16,6 +16,7 @@ public class GkParticipantRelation {
      * 手办id
      */
     private int gkId;
+
     /**
      * 发布者
      */

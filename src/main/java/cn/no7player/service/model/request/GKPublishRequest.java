@@ -1,5 +1,6 @@
 package cn.no7player.service.model.request;
 
+import cn.no7player.repository.model.LabelInfo;
 import cn.no7player.repository.model.enums.GKType;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class GKPublishRequest {
     /**
      * 手办大类
      */
-    private GKType type;
+    private String type;
     /**
      * 参与人数
      */
@@ -27,7 +28,11 @@ public class GKPublishRequest {
     /**
      * 标签
      */
-    private String labels;
+    private List<LabelInfo> labels;
+    /**
+     * 发布者
+     */
+    private  String publisher;
 
     public String getTitle() {
         return title;
@@ -45,11 +50,11 @@ public class GKPublishRequest {
         this.img = img;
     }
 
-    public GKType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(GKType type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -61,11 +66,19 @@ public class GKPublishRequest {
         this.participantsNum = participantsNum;
     }
 
-    public String getLabels() {
+    public List<LabelInfo> getLabels() {
         return labels;
     }
 
-    public void setLabels(String labels) {
+    public void setLabels(List<LabelInfo> labels) {
         this.labels = labels;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 }

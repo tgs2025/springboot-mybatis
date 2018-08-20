@@ -7,11 +7,14 @@ public class GKParticipatesRequest {
     /**
      * 参与者id
      */
+    //todo 类型
     private int id;
     /**
      * 参与者name
      */
     private String name;
+
+    //todo 手办信息 发布者信息
 
 
     public int getId() {

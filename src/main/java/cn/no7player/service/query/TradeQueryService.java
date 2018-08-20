@@ -5,7 +5,9 @@ package cn.no7player.service.query;
  */
 public interface TradeQueryService {
 
-    //成功交易
+    //最近20成功交易的  关系表
+
+    //贡献最多前10名用户
 
 
 }

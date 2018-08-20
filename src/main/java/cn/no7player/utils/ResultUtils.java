@@ -11,20 +11,20 @@ import cn.no7player.service.model.result.BaseResult;
 public class ResultUtils {
 
     public static <T extends BaseResult> T createSuccResult(Class<T> clazz) {
-        T result = createSuccResult(clazz);
+        T result = createResultObj(clazz);
         result.setSuccess(Boolean.TRUE);
         return result;
     }
 
 
     public static <T extends BaseResult> T createFailResult(Class<T> clazz) {
-        T result = createSuccResult(clazz);
+        T result = createResultObj(clazz);
         result.setSuccess(Boolean.FALSE);
         return result;
     }
 
     public static <T extends BaseResult> T createFailResultByException(Exception e, Class<T> clazz) {
-        T result = createSuccResult(clazz);
+        T result = createResultObj(clazz);
         result.setSuccess(Boolean.FALSE);
         if (e instanceof BaseException) {
             BaseException baseException = (BaseException) e;

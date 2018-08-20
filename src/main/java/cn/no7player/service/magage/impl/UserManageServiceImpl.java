@@ -141,11 +141,17 @@ public class UserManageServiceImpl implements UserManageService {
 
     private void check(UpdateUserRequest request) {
         if (request == null) {
-            throw new BaseException(ErrorCode.INVALID_PARAMETER, "地址不能为空");
+            throw new BaseException(ErrorCode.INVALID_PARAMETER, "更新地址请求不能为空");
         }
         if (request.getId() == null) {
             throw new BaseException(ErrorCode.INVALID_PARAMETER, "用户id不能为空");
         }
-        //todo 地址不能为空 电话不能为空
+        if(request.getAddress() == null){
+            throw new BaseException(ErrorCode.INVALID_PARAMETER, "地址不能为空");
+        }
+        if(request.getTelephone() == null){
+            throw new BaseException(ErrorCode.INVALID_PARAMETER, "电话不能为空");
+        }
+
     }
 }
