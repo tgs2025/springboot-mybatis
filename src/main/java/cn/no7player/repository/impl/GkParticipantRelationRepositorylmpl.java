@@ -1,14 +1,15 @@
 package cn.no7player.repository.impl;
 
 import cn.no7player.mapper.GkParticipantRelationMapper;
-import cn.no7player.repository.model.GkParticipantRelation;
-import cn.no7player.repository.model.dataobject.GkParticipantRelationDO;
 import cn.no7player.repository.GkParticipantRelationRepository;
 import cn.no7player.repository.converter.GkParticipantRelationConverter;
+import cn.no7player.repository.model.GkParticipantRelation;
+import cn.no7player.repository.model.dataobject.GkParticipantRelationDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by tgs on 2018/8/8.
@@ -31,5 +32,11 @@ public class GkParticipantRelationRepositorylmpl implements GkParticipantRelatio
     public GkParticipantRelation queryById(long id) {
         GkParticipantRelationDO gkParticipantRelationDO = gkParticipantRelationMapper.selectById(id);
         return GkParticipantRelationConverter.convert2Model(gkParticipantRelationDO);
+    }
+
+    @Override
+    public List<GkParticipantRelation> queryNewSuccTrade(int size) {
+        List<GkParticipantRelationDO> gkParticipantRelationDOS = gkParticipantRelationMapper.selectSuccRelationBySize(size);
+        return GkParticipantRelationConverter.convert2Models(gkParticipantRelationDOS);
     }
 }

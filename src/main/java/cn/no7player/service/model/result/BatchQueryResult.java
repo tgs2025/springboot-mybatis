@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by tgs on 2018/8/8.
  */
-public  class BatchQueryResult<T>  extends BaseResult {
+public class BatchQueryResult<T> extends BaseResult {
 
     private List<T> values;
 

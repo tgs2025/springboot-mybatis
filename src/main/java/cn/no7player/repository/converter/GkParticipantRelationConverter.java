@@ -3,6 +3,10 @@ package cn.no7player.repository.converter;
 import cn.no7player.repository.model.GkParticipantRelation;
 import cn.no7player.repository.model.dataobject.GkParticipantRelationDO;
 import cn.no7player.repository.model.enums.GPRIsTarget;
+import cn.no7player.utils.CollectionUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 手办关系参与表模型 和do转换器
@@ -45,6 +49,20 @@ public class GkParticipantRelationConverter {
         gkParticipantRelation.setGmtModified(gkParticipantRelationDO.getGmtModified());
         return gkParticipantRelation;
 
+    }
+
+    public static List<GkParticipantRelation> convert2Models(List<GkParticipantRelationDO> gkParticipantRelationDOS) {
+        if(CollectionUtils.isEmpty(gkParticipantRelationDOS)){
+            return new ArrayList<>();
+        }
+        List<GkParticipantRelation> result = new ArrayList<>();
+        for (GkParticipantRelationDO gkParticipantRelationDO : gkParticipantRelationDOS){
+            GkParticipantRelation gkParticipantRelation = convert2Model(gkParticipantRelationDO);
+            if(gkParticipantRelation != null){
+                result.add(gkParticipantRelation);
+            }
+        }
+        return result;
     }
 }
 
