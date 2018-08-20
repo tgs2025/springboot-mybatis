@@ -5,10 +5,10 @@ import cn.no7player.exceptions.enums.ErrorCode;
 import cn.no7player.repository.GarageKitsRepository;
 import cn.no7player.repository.GkLabelRelationRepository;
 import cn.no7player.repository.GkParticipantRelationRepository;
-import cn.no7player.repository.LabelInfoRepository;
 import cn.no7player.repository.model.GarageKits;
 import cn.no7player.repository.model.GkLabelRelation;
 import cn.no7player.repository.model.GkParticipantRelation;
+import cn.no7player.repository.model.LabelInfo;
 import cn.no7player.repository.model.enums.GKType;
 import cn.no7player.service.magage.GKManageService;
 import cn.no7player.service.model.request.GKParticipatesRequest;
@@ -17,21 +17,27 @@ import cn.no7player.service.model.result.ApiResult;
 import cn.no7player.service.model.result.BaseResult;
 import cn.no7player.utils.ResultUtils;
 import cn.no7player.utils.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 手办管理服务实现类
  * Created by tgs on 2018/8/14.
  */
+@Service
 public class GKManageServicelmpl implements GKManageService {
 
     /**
      * 注释
      */
-
+    @Autowired
     private GarageKitsRepository garageKitsRepository;
-
+    @Autowired
     private GkParticipantRelationRepository gkParticipantRelationRepository;
-
+    @Autowired
     private GkLabelRelationRepository gkLabelRelationRepository;
 
     @Override
@@ -40,11 +46,15 @@ public class GKManageServicelmpl implements GKManageService {
             //参数校验
             check(request);
             //执行业务
-            //字段不全  todo
+            //字段不全 List<LabelInfo> labels todo
             GarageKits garageKits = convertReq2Model(request);
-            GkLabelRelation gkLabelRelation = convertReq2Model1(request);
             Long gid = garageKitsRepository.insert(garageKits);
-            Long lid =gkLabelRelationRepository.insert(gkLabelRelation);
+
+            List<GkLabelRelation> gkLabelRelation = convertReq2Model1(request.getLabels(), gid);
+            for (GkLabelRelation o : gkLabelRelation) {
+                gkLabelRelationRepository.insert(o);
+            }
+
             //添加关系 label-手办关系
 
             //返回结果
@@ -53,6 +63,11 @@ public class GKManageServicelmpl implements GKManageService {
         } catch (Exception e) {
             return ResultUtils.createFailResultByException(e, ApiResult.class);
         }
+    }
+
+
+    private List<GkLabelRelation> convertReq2Model1(List<LabelInfo> labels, Long gid) {
+        
     }
 
     @Override
@@ -92,11 +107,9 @@ public class GKManageServicelmpl implements GKManageService {
 
         return garageKits;
     }
-    private GkLabelRelation convertReq2Model1(GKPublishRequest request){
-        GkLabelRelation gkLabelRelation = new GkLabelRelation();
-        gkLabelRelation.setLabelName(request.getLabels());
 
-    }
+
+
     private GkParticipantRelation convertReq2Model(GKParticipatesRequest request) {
         GkParticipantRelation gkParticipantRelation = new GkParticipantRelation();
         gkParticipantRelation.setParticipantId(request.getId());
